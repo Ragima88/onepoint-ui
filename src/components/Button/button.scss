@@ -1,0 +1,25 @@
+@use "../../styles/colors.scss" as v;
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 25rem;
+  font-size: 1.25rem;
+  height: 3rem;
+  padding: 0.875rem 1.25rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  border: 1px solid v.$button-border;
+  border-radius: 0.5rem;
+  background: v.$button-background;
+  color: v.$button-text;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  &:hover {
+    background: v.$button-background-hover;
+  }
+}
