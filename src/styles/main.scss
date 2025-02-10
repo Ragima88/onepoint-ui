@@ -19,6 +19,11 @@
   src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap");
   font-weight: 600;
 }
+@font-face {
+  font-family: "Roboto";
+  src: url("/src/assets/fonts/Roboto/Roboto-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
 
 html,
 body {

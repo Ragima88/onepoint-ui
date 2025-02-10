@@ -1,0 +1,22 @@
+@use "../../styles/colors.scss" as v;
+
+.title-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 25rem;
+  &-title {
+    font-weight: 500;
+    font-size: 2.125rem;
+    line-height: 120%;
+    text-align: center;
+  }
+  &-desc {
+    color: v.$title-block-desc-text;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+}
