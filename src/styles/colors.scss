@@ -1,8 +1,18 @@
+:root {
+  --primary: #0c111d;
+  --input-placeholder: #aaa;
+}
+
 $general-background: #fff;
 $primary: #0c111d;
 $general-hover-background: #f2f4f7;
 $primary-hover-background: #1d2939;
 $title-desc-text: #344054;
+$label-text: rgb(0, 0, 0);
+$input-border: rgb(208, 213, 221);
+$input-background: rgb(255, 255, 255);
+$input-placeholder: #aaa;
+$input-focus-border: rgb(12, 17, 29);
 
 $button-border: $primary;
 $button-background: $general-background;
@@ -13,3 +23,8 @@ $button-primary-text: $general-background;
 $button-primary-background-hover: $primary-hover-background;
 $title-block-title-text: $primary;
 $title-block-desc-text: $title-desc-text;
+$label-text: $label-text;
+$input-border: $input-border;
+$input-background: $input-background;
+$input-placeholder: $input-placeholder;
+$input-focus: $input-focus-border;

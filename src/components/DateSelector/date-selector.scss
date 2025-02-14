@@ -1,0 +1,17 @@
+.date-selector {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 25rem;
+  &-label {
+    padding-left: 0.5rem;
+    font-size: 14px;
+  }
+  &-fields {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    width: 100%;
+  }
+}
