@@ -1,0 +1,33 @@
+@use "../../styles/colors.scss" as v;
+.phone-field-label {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 25rem;
+  span {
+    font-size: 0.875rem;
+    padding-left: 0.5rem;
+  }
+  .phone-field {
+    display: flex;
+    width: 100%;
+    position: relative;
+    padding: 0.625rem;
+    border-radius: 0.5rem;
+    border: 1px solid v.$input-border;
+    &-left {
+      display: flex;
+      border-right: 1px solid #d0d5dd;
+      padding-right: 10px;
+      font-size: 0.875rem;
+    }
+    .text-field label {
+      padding: 0;
+      margin: 0;
+      input {
+        border: none;
+        height: 0;
+      }
+    }
+  }
+}

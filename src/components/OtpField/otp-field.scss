@@ -1,0 +1,27 @@
+@use "../../styles/colors.scss" as v;
+.otp-field-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 16.5rem;
+  gap: 1.5rem;
+
+  .otp-field {
+    display: flex;
+    text-align: center;
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid v.$input-border;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0;
+    font-weight: 500;
+    font-size: 1.75rem;
+    line-height: 2.1rem;
+    color: v.$primary;
+    &:focus {
+      border-color: v.$input-focus-border;
+    }
+  }
+}

@@ -1,0 +1,115 @@
+@use "../../styles/colors.scss" as v;
+.search-list {
+  position: relative;
+  width: 100%;
+  max-width: 25rem;
+  margin: auto;
+
+  &__input-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid v.$input-border;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    background: #fff;
+  }
+
+  &__icon {
+    color: #888;
+  }
+
+  &__input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 4px 8px;
+    background: transparent;
+    font-size: 16px;
+  }
+
+  &__clear-icon {
+    cursor: pointer;
+    color: #888;
+    &:hover {
+      color: #000;
+    }
+  }
+
+  &__popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 11;
+    overflow-y: auto;
+
+    @media (min-width: 1024px) {
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50%;
+      max-width: 500px;
+      height: calc(100% - 40px);
+      margin: 20px 0;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &__overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(200, 200, 200, 0.7);
+    z-index: 10;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+  }
+
+  &__back-icon {
+    cursor: pointer;
+    margin-right: 0.875rem;
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #333;
+  }
+
+  &__item {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid v.$input-border-light;
+    &:hover {
+      background: #f5f5f5;
+    }
+  }
+
+  &__no-results {
+    padding: 10px;
+    color: #888;
+    text-align: center;
+  }
+
+  &__highlight {
+    color: #ff3838;
+    text-decoration: underline;
+  }
+}
+.search-list__popup .search-list__input-container {
+  border-radius: 0;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  padding: 0.85rem;
+}
