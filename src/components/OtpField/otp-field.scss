@@ -6,7 +6,6 @@
   justify-content: center;
   width: 100%;
   max-width: 16.5rem;
-  gap: 1.5rem;
 
   .otp-field {
     display: flex;
@@ -20,6 +19,10 @@
     font-size: 1.75rem;
     line-height: 2.1rem;
     color: v.$primary;
+    margin-right: 1.5rem;
+    &:last-child {
+      margin-right: 0;
+    }
     &:focus {
       border-color: v.$input-focus-border;
     }

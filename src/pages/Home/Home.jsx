@@ -3,8 +3,7 @@ import FinCodeField from "../../components/FinCodeField/FinCodeField";
 import NameField from "../../components/NameField/NameField";
 import SelectField from "../../components/SelectField/SelectField";
 import "./home.scss";
-import DateSelector from "../../components/DateSelector/DateSelector";
-import IdNumberField from "../../components/IdNumberField/IdNumberField";
+
 import RadioGroup from "../../components/RadioGroup/RadioGroup";
 import TextareaField from "../../components/TextAreaField/TextAreaField";
 import EmailField from "../../components/EmailField/EmailField";
@@ -25,8 +24,6 @@ const radioGroup = [
 ];
 
 const Home = () => {
-  const [date, setDate] = useState(null);
-  const [selected, setSelected] = useState("");
   const [textarea, setTextarea] = useState("");
   const areaChange = (e) => {
     setTextarea(e.target.value);
@@ -43,18 +40,7 @@ const Home = () => {
         value={selectedValue}
         onChange={(e) => setSelectedValue(e.target.value)}
       />*/}
-      <DateSelector
-        labelText={"Doğum günü:"}
-        options={options}
-        value={date}
-        onChange={setDate}
-      />
-      <IdNumberField />
-      <RadioGroup
-        options={radioGroup}
-        value={selected}
-        onChange={setSelected}
-      />
+
       <TextareaField
         label={""}
         value={textarea}

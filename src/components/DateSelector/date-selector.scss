@@ -6,12 +6,18 @@
   max-width: 25rem;
   &-label {
     padding-left: 0.5rem;
-    font-size: 14px;
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
   }
   &-fields {
     display: flex;
     flex-direction: row;
-    gap: 0.5rem;
     width: 100%;
+    .select-field {
+      margin-right: 0.5rem;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
   }
 }

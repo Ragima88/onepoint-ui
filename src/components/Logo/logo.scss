@@ -1,0 +1,14 @@
+.logo-link {
+  width: 100%;
+  max-width: 14.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .logo {
+    width: 100%;
+    display: flex;
+    img {
+      width: 100%;
+    }
+  }
+}

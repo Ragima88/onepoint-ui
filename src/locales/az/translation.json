@@ -1,0 +1,58 @@
+{
+  "welcomePage": {
+    "title": "Xoş gəlmişsiniz!",
+    "description": "Sərt şərtlər, yorucu sənədləşmə, qarışıq prosedurlar və banka getmək məcburiyyəti artıq geridə qaldı.",
+    "caption": "Daxil olun",
+    "primaryCaption": "Qeydiyyat"
+  },
+  "loginPage": {
+    "title": "Daxil ol",
+    "description": "Enter the email and password you used to register",
+    "finCode": "FİN kod:",
+    "forgotPassword": "Şifrənizi unutmusunuz?",
+    "notAccount": "Hesabınız yoxdur?",
+    "register": "Qeydiyyatdan keçin",
+    "primaryCaption": "Davam et"
+  },
+  "personalPage": {
+    "title": "Şəxsi məlumatlar",
+    "description": "Doğum tarixinizi və şəxsiyyət vəsiqənizin məlumatlarını daxil edin.",
+    "dateLabel": "Doğum günü:",
+    "idNumberLabel": "Şəxsiyyət vəsiqəsinin seriya nömrəsi:",
+    "finCodeLabel": "FİN kod:",
+    "finPlaceholder": "FİN kodu daxil edin.",
+    "attention": "Yalnız rəqəmlər və ingilis hərfləri daxil edin.",
+    "primaryCaption": "Təsdiq edin"
+  },
+  "cameFromPage": {
+    "title": "Haradan gəlmisiniz?",
+    "description": "OnePoint platforması barədə ilk dəfə haradan məlumat aldığınızı aşağıdan qeyd edin",
+    "primaryCaption": "Davam et"
+  },
+  "employmentPage": {
+    "title": "Employment Status",
+    "description": "Rəsmi iş yeriniz var?",
+    "workPlaceLabel": "İş yerinizin adını qeyd edin",
+    "primaryCaption": "Davam et"
+  },
+  "addressPage": {
+    "title": "Actual Address",
+    "description": "Which region do you reside in?",
+    "actualAddress": "What is your full actual address?",
+    "radioLabel": "Is the residence you live in owned by you?",
+    "primaryCaption": "Davam et"
+  },
+  "consentPage": {
+    "title": "Şərtlər və icazələr",
+    "description": "OnePoint platforması vasitəsilə kredit qaydalarına uyğunluğunuzu yoxlamaq üçün biz sizin razılığınız əsasında Kredit Bürosu, ASANFinans və digər rəsmi mənbələrdən məlumat alırıq. Razılıq həm OnePoint platformasına (Finmarket MMC), həm də əlaqəli kredit tərəfdaşı üçün alınır. Uyğunluq yoxlanışı və kredit şərtləri haqqında ətraflı məlumat almaq üçün aşağıdakı linkə keçid edin",
+    "restrictions": "Şərtlər və icazələr",
+    "checkboxLabel": "Şərtləri oxudum və başa düşdüm",
+    "primaryCaption": "Razıyam",
+    "secondaryCaption": "İmtina et"
+  },
+  "passwordPage": {
+    "title": "Şifrə təyin edin",
+    "description": "Təyin etdiyiniz şifrə qeyd olunan tələblərə uyğun gəlməlidir",
+    "primaryCaption": "Təsdiq et"
+  }
+}

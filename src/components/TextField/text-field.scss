@@ -7,6 +7,8 @@
   width: 100%;
   max-width: 25rem;
   label {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 0.25rem;
     color: v.$label-text;
     font-size: 0.875rem;
@@ -15,6 +17,8 @@
     width: 100%;
     span {
       padding-left: 0.5rem;
+      color: v.$title-block-desc-text;
+      margin-bottom: 0.25rem;
     }
     input {
       font-size: 0.875rem;

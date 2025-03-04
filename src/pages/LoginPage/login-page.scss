@@ -1,0 +1,61 @@
+@use "../../styles/colors.scss" as v;
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 25rem;
+  &-in {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5rem 1.5rem 3rem;
+  }
+  &-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  &-fields {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2rem;
+  }
+  &-link {
+    display: flex;
+    align-self: self-end;
+    color: #2e90fa;
+    text-decoration: underline;
+    margin-top: 1rem;
+  }
+  &-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    &-question {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin-top: 1.5rem;
+      span {
+        color: v.$primary;
+      }
+      &-link {
+        color: #2e90fa;
+        text-decoration: underline;
+      }
+    }
+  }
+}

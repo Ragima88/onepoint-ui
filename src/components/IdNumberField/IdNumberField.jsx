@@ -9,7 +9,7 @@ const options = [
   { label: "AA", value: "AA" },
 ];
 
-const IdNumber = ({}) => {
+const IdNumberField = ({ label = "" }) => {
   const [type, setType] = useState("AZE");
   const [number, setNumber] = useState("");
 
@@ -26,20 +26,23 @@ const IdNumber = ({}) => {
   };
 
   return (
-    <div className="id-number-field">
-      <SelectField
-        className={"id-number-field-serial"}
-        onChange={typeChange}
-        options={options}
-        value={type}
-      />
-      <TextField
-        className={"id-number-field-number"}
-        placeholder={"Seriya nömrəsini daxil edin."}
-        value={number}
-        onChange={numberChange}
-      />
-    </div>
+    <label className="id-number-field-label">
+      <span>{label}</span>
+      <div className="id-number-field">
+        <SelectField
+          className={"id-number-field-serial"}
+          onChange={typeChange}
+          options={options}
+          value={type}
+        />
+        <TextField
+          className={"id-number-field-number"}
+          placeholder={"Seriya nömrəsini daxil edin."}
+          value={number}
+          onChange={numberChange}
+        />
+      </div>
+    </label>
   );
 };
-export default IdNumber;
+export default IdNumberField;

@@ -1,32 +1,43 @@
 @use "../../styles/colors.scss" as v;
-.id-number-field {
+.id-number-field-label {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: flex-start;
   width: 100%;
   max-width: 25rem;
-  &-serial.select-field {
-    width: 6rem;
+  span {
+    padding-left: 0.5rem;
+    font-size: 0.875rem;
+  }
+  .id-number-field {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
 
-    .select-field-input {
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-      border-right: 0;
-      &:focus {
-        border-color: v.$input-border;
+    &-serial.select-field {
+      width: 6rem;
+
+      .select-field-input {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-right: 0;
+        &:focus {
+          border-color: v.$input-border;
+        }
       }
     }
-  }
-  &-number.text-field {
-    span {
-      margin: 0;
-      padding: 0;
-    }
-    input {
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
+    &-number.text-field {
+      span {
+        margin: 0;
+        padding: 0;
+      }
+      input {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
 
-      padding: 0 15px;
+        padding: 0 0.9rem;
+      }
     }
   }
 }

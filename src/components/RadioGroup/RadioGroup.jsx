@@ -1,9 +1,14 @@
-import { useState } from "react";
 import "./radio-group.scss";
 
-const RadioGroup = ({ options, value = "", onChange = () => {} }) => {
+const RadioGroup = ({
+  labelText = "",
+  options,
+  value = "",
+  onChange = () => {},
+}) => {
   return (
     <div className="radio-group">
+      <span className="radio-group-label">{labelText}</span>
       {options.map((option) => {
         return (
           <label key={option.value}>
