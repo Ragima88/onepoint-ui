@@ -19,7 +19,7 @@ const LoginPage = () => {
         <div className="login-page-fields">
           <FinCodeField label={t("loginPage.finCode")} />
 
-          <Link className="login-page-link" to={""}>
+          <Link className="login-page-link" to={""} onClick={""}>
             {t("loginPage.forgotPassword")}
           </Link>
         </div>

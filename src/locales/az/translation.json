@@ -54,5 +54,20 @@
     "title": "Şifrə təyin edin",
     "description": "Təyin etdiyiniz şifrə qeyd olunan tələblərə uyğun gəlməlidir",
     "primaryCaption": "Təsdiq et"
+  },
+  "finScorePage": {
+    "title": "Gözləmə siyahısı",
+    "description": "Hal-hazırda kredit verilişi məhdud sayda aparılır. Gözləmə siyahısında qeydiyyatdan keçməyiniz xahiş olunur. İlk fürsətdə sizi SMS vasitəsilə yenidən dəvət edəcəyik.",
+    "primaryCaption": "Davam et",
+    "nameLabel": "Soyadınız, adınız, atanızın adı:",
+    "namePlaceHolder": "Daxil edin",
+    "phoneLabel": "Mobil Nömrə",
+    "scoringContent": "Linkə daxil olub skorunuzu yoxlayın və soldakı qaydada screenshot edin. Ardıcıllıq aşağıa video təlimatda göstərilib. Məlumat Kredit bürosu tərəfindən təqdim olunur.",
+    "finDocLink": "FinDoc-a keçid et",
+    "videoPlayerTitle": "Təlimat videosu",
+    "warningMessage": "Kredit skorinqinizdən əlavə hansısa şəkili fayla əlavə etdikdə müraciətinizə baxılmayacaq",
+    "fileUploadTitle": "Faylı seçin və bura əlavə edin",
+    "fileUploadDesc": "JPG, PNG ya PDF, fayl ölçüsü 2 MB-dan çox olmamalıdır",
+    "fileUploadBtn": "Faylı seçin"
   }
 }

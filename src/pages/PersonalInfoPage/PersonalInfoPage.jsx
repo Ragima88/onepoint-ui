@@ -10,6 +10,8 @@ import { useState } from "react";
 import Page from "../../components/Page/Page";
 import { useTranslation } from "react-i18next";
 import "../../i18n";
+import Drawer from "../../components/Drawer/Drawer";
+import passport from "../../assets/images/passport.png";
 
 const options = [
   { label: "Select an option", value: "", disabled: true },
@@ -19,7 +21,11 @@ const options = [
 ];
 const PersonalInfoPage = () => {
   const { t } = useTranslation();
+  const [drawerOpen, setDrawerOpen] = useState(false);
   const [date, setDate] = useState(null);
+  const finClick = () => {
+    setDrawerOpen(true);
+  };
   return (
     <Page className="personal-info-page">
       <div className="personal-info-fields">
@@ -43,9 +49,16 @@ const PersonalInfoPage = () => {
             <Image className="info-icon" src={infoIcon} />
             <span>{t("personalPage.attention")}</span>
           </div>
+          <div onClick={finClick} className="fin-link">
+            FİN kod nədir?
+          </div>
         </div>
       </div>
       <PrimaryButton caption={t("personalPage.primaryCaption")} />
+      <Drawer isOpen={drawerOpen} onClose={() => setDrawerOpen(false)}>
+        <h2 className="fin-title">FİN kod nədir?</h2>
+        <Image src={passport} />
+      </Drawer>
     </Page>
   );
 };

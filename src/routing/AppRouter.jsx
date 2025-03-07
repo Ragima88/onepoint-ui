@@ -8,6 +8,8 @@ import WelcomePage from "../pages/WelcomePage/WelcomePage";
 import ConsentPage from "../pages/ConsentPage/ConsentPage";
 import LoginPage from "../pages/LoginPage/LoginPage";
 import PasswordPage from "../pages/PasswordPage/PasswordPage";
+import DrawerPage from "../pages/DrawerPage/DrawerPage";
+import FinScorePage from "../pages/FinScorePage/FinScorePage";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -46,6 +48,14 @@ const router = createBrowserRouter([
       {
         path: "/password",
         element: <PasswordPage />,
+      },
+      {
+        path: "/drawer",
+        element: <DrawerPage />,
+      },
+      {
+        path: "/fin-score",
+        element: <FinScorePage />,
       },
     ],
   },
