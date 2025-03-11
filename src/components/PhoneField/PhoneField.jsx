@@ -2,7 +2,7 @@ import { useState } from "react";
 import TextField from "../TextField/TextField";
 import "./phone-field.scss";
 
-const PhoneField = ({ label }) => {
+const PhoneField = ({ label, disabled = false }) => {
   const [rawDigits, setRawDigits] = useState("");
 
   // Convert any string to digits-only
@@ -56,12 +56,13 @@ const PhoneField = ({ label }) => {
   return (
     <label className="phone-field-label">
       <span>{label}</span>
-      <div className="phone-field">
+      <div className={`phone-field ${disabled ? "disabled" : ""}`}>
         <div className="phone-field-left">+994</div>
         <TextField
           placeholder="(——) ——— —— ——"
           value={formatDigits(rawDigits)}
           onChange={onChange}
+          disabled={disabled}
         />
       </div>
     </label>

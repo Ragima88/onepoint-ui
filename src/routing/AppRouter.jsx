@@ -10,6 +10,14 @@ import LoginPage from "../pages/LoginPage/LoginPage";
 import PasswordPage from "../pages/PasswordPage/PasswordPage";
 import DrawerPage from "../pages/DrawerPage/DrawerPage";
 import FinScorePage from "../pages/FinScorePage/FinScorePage";
+import RejectPage from "../pages/RejectPage/RejectPage";
+import EmailPage from "../pages/EmailPage/EmailPage";
+import EmailOtpPage from "../pages/EmailOtpPage/EmailOtpPage";
+import PhonePage from "../pages/PhonePage/PhonePage";
+import PhoneOtpPage from "../pages/PhoneOtpPage/PhoneOtpPage";
+import KYCPage from "../pages/KYCPage/KYCPage";
+import LoanPage from "../pages/LoanPage/LoanPage";
+import PurposePage from "../pages/PurposePage/PurposePage";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -56,6 +64,38 @@ const router = createBrowserRouter([
       {
         path: "/fin-score",
         element: <FinScorePage />,
+      },
+      {
+        path: "/reject",
+        element: <RejectPage />,
+      },
+      {
+        path: "/email",
+        element: <EmailPage />,
+      },
+      {
+        path: "/email-otp",
+        element: <EmailOtpPage />,
+      },
+      {
+        path: "/phone",
+        element: <PhonePage />,
+      },
+      {
+        path: "/phone-otp",
+        element: <PhoneOtpPage />,
+      },
+      {
+        path: "/kyc",
+        element: <KYCPage />,
+      },
+      {
+        path: "/loan",
+        element: <LoanPage />,
+      },
+      {
+        path: "/purpose",
+        element: <PurposePage />,
       },
     ],
   },

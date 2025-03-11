@@ -1,0 +1,32 @@
+.purpose-page {
+  background-color: #fafafa;
+  &-in {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5rem 1.5rem 2rem;
+  }
+  &-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 1rem;
+    & .radio-group {
+      margin-bottom: 0.625rem;
+    }
+  }
+  &-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  &-btn {
+    margin-bottom: 1rem;
+  }
+}

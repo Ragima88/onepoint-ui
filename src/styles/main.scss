@@ -1,34 +1,13 @@
 @font-face {
-  font-family: "Roboto";
-  src: url("/src/assets/fonts/Roboto/Roboto-Light.ttf") format("truetype");
-  font-weight: 300;
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: url("/src/assets/fonts/Roboto/Roboto-Regular.ttf") format("truetype");
-  font-weight: 400;
-}
-@font-face {
-  font-family: "Roboto";
-  src: url("/src/assets/fonts/Roboto/Roboto-Medium.ttf") format("truetype");
-  font-weight: 500;
-}
-@font-face {
-  font-family: "Roboto";
-  src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap");
-  font-weight: 600;
-}
-@font-face {
-  font-family: "Roboto";
-  src: url("/src/assets/fonts/Roboto/Roboto-Bold.ttf") format("truetype");
-  font-weight: 700;
+  font-family: "DM Sans";
+  src: url("/src/assets/fonts/DM_Sans/DMSans-VariableFont_opsz\,wght.ttf")
+    format("truetype");
 }
 
 html,
 body,
 #root {
-  font-family: "Roboto", sans-serif;
+  font-family: "DM Sans", sans-serif;
   position: relative;
   min-height: 100vh;
   min-width: 375px;

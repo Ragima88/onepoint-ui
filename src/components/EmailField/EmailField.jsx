@@ -2,7 +2,7 @@ import { useState } from "react";
 import TextField from "../TextField/TextField";
 import "./email-field.scss";
 
-const EmailField = () => {
+const EmailField = ({ label, disabled }) => {
   const [value, setValue] = useState("");
 
   const handleChange = (e) => {
@@ -24,7 +24,14 @@ const EmailField = () => {
     setValue(inputValue);
   };
 
-  return <TextField label="Email" value={value} onChange={handleChange} />;
+  return (
+    <TextField
+      label={label}
+      value={value}
+      onChange={handleChange}
+      disabled={disabled}
+    />
+  );
 };
 
 export default EmailField;

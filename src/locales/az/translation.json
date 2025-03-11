@@ -69,5 +69,82 @@
     "fileUploadTitle": "Faylı seçin və bura əlavə edin",
     "fileUploadDesc": "JPG, PNG ya PDF, fayl ölçüsü 2 MB-dan çox olmamalıdır",
     "fileUploadBtn": "Faylı seçin"
+  },
+  "rejectPage": {
+    "title": "İmtina olundu",
+    "desc": "Kredit skorunuzun aşağı olması ilə əlaqədar sizi qeydiyyata ala bilmirik.",
+    "primaryCaption": "Bağla"
+  },
+  "emailPage": {
+    "title": "Email təsdiqi",
+    "desc": "Qeyd etdiyiniz mail ünvanına OTP kodu göndəriləcəkdir",
+    "emailLabel": "Email",
+    "primaryCaption": "Təsdiq et"
+  },
+  "emailOtpPage": {
+    "title": "Email təsdiqi",
+    "desc": "Qeyd etdiyiniz mail ünvanına göndərilən OTP kodu aşağıdakı xanalara qeyd edin",
+    "primaryCaption": "Təsdiq et"
+  },
+  "phonePage": {
+    "title": "Nömrə təsdiqi",
+    "desc": "Qeyd etdiyiniz mail ünvanına OTP kodu göndəriləcəkdir",
+    "phoneLabel": "Mobil nömrə",
+    "primaryCaption": "Təsdiq et"
+  },
+  "phoneOtpPage": {
+    "title": "Nömrə təsdiqi",
+    "desc": "Qeyd etdiyiniz mail ünvanına göndərilən OTP kodu aşağıdakı xanalara qeyd edin",
+    "primaryCaption": "Təsdiq et"
+  },
+  "kycPage": {
+    "items": [
+      {
+        "id": 1,
+        "content": "Üztanıma prosedurun vasitəsilə üzünüz və şəxsiyyət vəsiqəniz yoxlanacaq"
+      },
+      {
+        "id": 2,
+        "content": "Yaxşı işıqlandırma təmin edin, üzünüzü tam şəkildə kameraya yaxın tutun və papaq, gün eynəyi və s. kimi aksessuarları çıxarın"
+      },
+      {
+        "id": 3,
+        "content": "Şəxsiyyət vəsiqənizin əsli üzərinizdə olmalıdır və etibarlılıq müddəti keçməməlidir"
+      },
+      {
+        "id": 4,
+        "content": "Üz tanıma proseduru başladıqdan sonra səhifəni tək etməyin. Səhifə yenilənsə və ya tərk edilsə qeydiyyat sıfırlanır"
+      }
+    ],
+    "title": "Şəxsiyyətinizi təsdiq edin",
+    "desc": "Şəxsiyyətinizi dəqiqləşdirmək üçün qısa bir üztanıma prosedurundan keçməyiniz xahiş olunur",
+    "primaryCaption": "Davam et"
+  },
+  "loanPage": {
+    "title": "Ekspress kredit",
+    "desc": "Sadə. Sürətli. Hər kəs üçün",
+    "primaryCaption": "Kredit al",
+    "menu": {
+      "age": "20-65 yaş arası",
+      "amount": "50-500 AZN nağd kreditlər ",
+      "number": "3 əlaqə nömrəsinin razılığı",
+      "delay": "Cari gecikmə olmamalıdır",
+      "face": "SİMA tətbiqi ilə eyniləşdirmə",
+      "transfer": "Yerli bank kartlarına köçürülmə",
+      "check": "Məlumat rəsmi qaydada yoxlanılır"
+    }
+  },
+  "loanBottom": {
+    "menu": {
+      "credit": "Kredit",
+      "history": "Tarixçə",
+      "scoring": "Skorinq",
+      "support": "Dəstək"
+    }
+  },
+  "purposePage": {
+    "title": "Select a loan purpose",
+    "desc": "Krediti nə üçün istifadə edəcəksiniz?",
+    "primaryCaption": "Davam et"
   }
 }

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./otp-field.scss";
 
-const OtpField = ({ onOtpComplete }) => {
+const OtpField = ({ onOtpComplete = () => {}, disabled = false }) => {
   const [otp, setOtp] = useState(["", "", "", ""]);
 
   useEffect(() => {
@@ -36,7 +36,7 @@ const OtpField = ({ onOtpComplete }) => {
       e.preventDefault();
       const pasteData = e.clipboardData.getData("text").replace(/\D/g, ""); // Удаляем все нечисловые символы
       if (!pasteData) return;
-      if (pastedData.length !== 4) return;
+      if (pasteData.length !== 4) return;
 
       const newOtp = [...otp];
       pasteData.split("").forEach((char, index) => {
@@ -63,13 +63,14 @@ const OtpField = ({ onOtpComplete }) => {
         <input
           key={i}
           id={`otp-${i}`}
-          className="otp-field"
+          className={`otp-field ${disabled ? "disabled" : ""}`}
           type="text"
           value={digit}
           onChange={(e) => handleChange(e, i)}
           onKeyDown={(e) => handleKeyDown(e, i)}
           onPaste={handlePaste}
           maxLength="1"
+          disabled={disabled}
         />
       ))}
     </div>

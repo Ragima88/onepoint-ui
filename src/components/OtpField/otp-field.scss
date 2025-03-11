@@ -20,11 +20,17 @@
     line-height: 2.1rem;
     color: v.$primary;
     margin-right: 1.5rem;
+
     &:last-child {
       margin-right: 0;
     }
     &:focus {
       border-color: v.$input-focus-border;
+    }
+    &.disabled {
+      border: 1px solid #98a2b3;
+      color: #98a2b3;
+      background-color: #f3f4f7;
     }
   }
 }

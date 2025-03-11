@@ -37,4 +37,9 @@
       border-color: v.$input-focus;
     }
   }
+  &.disabled label input {
+    background-color: #f3f4f7;
+    border: 1px solid #98a2b3;
+    color: #98a2b3;
+  }
 }

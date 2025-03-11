@@ -1,0 +1,55 @@
+.loan-page {
+  background-color: #fafafa;
+  &-in {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5rem 1.5rem 2rem;
+  }
+  &-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  &-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: white;
+    padding: 0.5rem 0;
+    border: 1px solid #d0d5dd;
+    border-radius: 0.5rem;
+    &-item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+      padding: 8px 12px;
+      font-size: 14px;
+    }
+    &-icon {
+      width: 32px;
+      margin-right: 1rem;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  &-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  &-btn {
+    margin-bottom: 1rem;
+  }
+}

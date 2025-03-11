@@ -8,11 +8,14 @@ const TextField = ({
   name,
   value,
   onChange,
+  disabled = false,
 }) => {
   const textClass = classNames({
     ["text-field"]: true,
     [`${className}`]: true,
+    ["disabled"]: disabled,
   });
+
   return (
     <div className={textClass}>
       <label>
@@ -24,6 +27,7 @@ const TextField = ({
           placeholder={placeholder}
           value={value}
           onChange={onChange}
+          disabled={disabled}
         />
       </label>
     </div>
