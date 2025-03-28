@@ -1,0 +1,74 @@
+.loan-page2 {
+  background-color: #f3f4f7;
+  &-in {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5rem 1.5rem 2rem;
+  }
+  &-pic {
+    width: 6.7rem;
+  }
+  &-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    .title-block .title-block-title {
+      font-size: 1.75rem;
+    }
+    .title-block {
+      padding-top: 2rem;
+    }
+    &-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      &-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 0.5rem 0.75rem;
+        border-radius: 0.5rem;
+        border: 1px solid #d0d5dd;
+        margin-bottom: 1.25rem;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      &-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        width: 100%;
+        font-size: 0.875rem;
+      }
+      &-img {
+        width: 2rem;
+        margin-right: 0.5rem;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  &-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  &-primary-btn,
+  &-btn {
+    margin-bottom: 1.25rem;
+  }
+}

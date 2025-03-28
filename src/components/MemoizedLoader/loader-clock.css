@@ -1,0 +1,33 @@
+.loader-clock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 5em;
+  height: 5em;
+}
+
+.loader-clock-in {
+  width: 3.75em;
+  aspect-ratio: 1;
+  display: flex;
+  color: #000;
+  border: 0.25em solid;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background: radial-gradient(circle 0.3125em, currentColor 95%, #0000),
+    linear-gradient(currentColor 50%, #0000 0) 50%/0.25em 60% no-repeat;
+  animation: l007 2s infinite linear;
+}
+.loader-clock-in:before {
+  content: "";
+  flex: 1;
+  background: linear-gradient(currentColor 50%, #0000 0) 50%/0.25em 80%
+    no-repeat;
+  animation: inherit;
+}
+@keyframes l007 {
+  100% {
+    transform: rotate(1turn);
+  }
+}

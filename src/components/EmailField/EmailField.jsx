@@ -1,9 +1,10 @@
-import { useState } from "react";
 import TextField from "../TextField/TextField";
 import "./email-field.scss";
 
-const EmailField = ({ label, disabled }) => {
-  const [value, setValue] = useState("");
+const EmailField = ({ label, disabled, value, setValue, error, setError }) => {
+  const validateEmail = (email) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
 
   const handleChange = (e) => {
     let inputValue = e.target.value;
@@ -22,15 +23,30 @@ const EmailField = ({ label, disabled }) => {
     inputValue = inputValue.replace(/\.{2,}/g, ".");
 
     setValue(inputValue);
+    if (validateEmail(inputValue)) {
+      setError(false);
+    }
+  };
+
+  const handleBlur = () => {
+    if (validateEmail(value)) {
+      setError(false);
+    } else {
+      setError(true);
+    }
   };
 
   return (
-    <TextField
-      label={label}
-      value={value}
-      onChange={handleChange}
-      disabled={disabled}
-    />
+    <>
+      <TextField
+        label={label}
+        value={value}
+        onChange={handleChange}
+        disabled={disabled}
+        onBlur={handleBlur}
+      />
+      {error && <div className="error-note">{"error"}</div>}
+    </>
   );
 };
 

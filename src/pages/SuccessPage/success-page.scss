@@ -1,0 +1,55 @@
+.success-page {
+  background-color: #f3f4f7;
+  &-in {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5rem 1.5rem 2rem;
+  }
+  &-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 18rem;
+    flex: 1;
+    .title-block {
+      padding-bottom: 1rem;
+    }
+    .title-block .title-block-title {
+      font-weight: 700;
+      font-size: 1.25rem;
+      line-height: 120%;
+      color: #0c111d;
+    }
+    .title-block .title-block-desc {
+      font-size: 0.875rem;
+      line-height: 150%;
+    }
+  }
+  &-info {
+    font-size: 0.687rem;
+    line-height: 0.8rem;
+    text-align: center;
+    color: #dc6803;
+  }
+  &-img {
+    width: 6.4rem;
+    img {
+      width: 100%;
+    }
+  }
+  &-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  &-primary-btn {
+    margin-bottom: 1.25rem;
+  }
+}

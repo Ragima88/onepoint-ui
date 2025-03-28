@@ -9,12 +9,50 @@ import PrimaryButton from "../../components/PrimaryButton/PrimaryButton";
 import NameField from "../../components/NameField/NameField";
 import PhoneField from "../../components/PhoneField/PhoneField";
 import docIcon from "../../assets/icons/doc-icon.png";
-import warning from "../../assets/icons/warning.png";
+
 import { Link } from "react-router-dom";
 import VerticalVideoPlayer from "../../components/VerticalVideoPlayer/VerticalVideoPlayer";
 import FileUpload from "../../components/FileUpload/FileUpload";
+import Warning from "../../components/Warning/Warning";
+import { useState } from "react";
 const FinScorePage = () => {
   const { t } = useTranslation();
+
+  const [nameError, setNameError] = useState(false);
+  const [phoneError, setPhoneError] = useState(false);
+  const [fileError, setFileError] = useState(false);
+  const [uploadedFile, setUploadedFile] = useState(null);
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+
+  const handleSubmit = () => {
+    const isNameEmpty = !name.trim();
+    const isPhoneEmpty = !phone.trim();
+    const isFileMissing = !uploadedFile;
+
+    setNameError(isNameEmpty);
+    setPhoneError(isPhoneEmpty);
+
+    if (
+      isNameEmpty ||
+      isPhoneEmpty ||
+      isFileMissing ||
+      phoneError ||
+      fileError ||
+      nameError
+    ) {
+      alert("Zəhmət olmasa, bütün sahələri doldurun və fayl yükləyin.");
+      return;
+    }
+  };
+
+  const handleNameChange = (value) => {
+    setName(value);
+  };
+  const handlePhoneChange = (value) => {
+    setPhone(value);
+  };
+
   return (
     <Page className={"fin-score-page"}>
       <div className="fin-score-page-top">
@@ -25,8 +63,20 @@ const FinScorePage = () => {
         <NameField
           label={t("finScorePage.nameLabel")}
           placeholder={t("finScorePage.namePlaceHolder")}
+          value={name}
+          onChange={handleNameChange}
+          error={nameError}
+          setError={setNameError}
         />
-        <PhoneField label={t("finScorePage.phoneLabel")} />
+
+        <PhoneField
+          value={phone}
+          onChange={handlePhoneChange}
+          label={t("finScorePage.phoneLabel")}
+          error={phoneError}
+          setError={setPhoneError}
+        />
+
         <div className="scoring">
           <Image className="scoring-img" src={scoring} />
           <div className="scoring-content">
@@ -47,16 +97,17 @@ const FinScorePage = () => {
           title={t("finScorePage.fileUploadTitle")}
           desc={t("finScorePage.fileUploadDesc")}
           btn={t("finScorePage.fileUploadBtn")}
+          error={fileError}
+          setError={setFileError}
+          onFileChange={setUploadedFile}
         />
-        <div className="warning">
-          <Image className="warning-img" src={warning} />
-          <span className="warning-message">
-            {t("finScorePage.warningMessage")}
-          </span>
-        </div>
+        <Warning message={t("finScorePage.warningMessage")} />
       </div>
       <div className="fin-score-page-bottom">
-        <PrimaryButton caption={t("finScorePage.primaryCaption")} />
+        <PrimaryButton
+          caption={t("finScorePage.primaryCaption")}
+          onClick={handleSubmit}
+        />
       </div>
     </Page>
   );

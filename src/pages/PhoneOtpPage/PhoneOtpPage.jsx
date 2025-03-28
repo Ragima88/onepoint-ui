@@ -9,7 +9,18 @@ import { useState } from "react";
 
 const PhoneOtpPage = () => {
   const [disabled, setDisabled] = useState(false);
+  const [otpCode, setOtpCode] = useState("");
   const { t } = useTranslation();
+
+  const handleSubmit = () => {
+    if (otpCode.length !== 4) {
+      alert("Zəhmət olmasa, 4 rəqəmli OTP kodunu daxil edin.");
+      return;
+    }
+
+    setDisabled(true);
+    // Proceed with API call or navigation
+  };
   return (
     <Page className="phone-otp-page">
       <div className="phone-otp-page-top">
@@ -17,11 +28,11 @@ const PhoneOtpPage = () => {
           title={t("phoneOtpPage.title")}
           desc={t("phoneOtpPage.desc")}
         />
-        <OtpField disabled={disabled} />
+        <OtpField disabled={disabled} onOtpComplete={setOtpCode} />
       </div>
       <PrimaryButton
         caption={t("phoneOtpPage.primaryCaption")}
-        onClick={() => setDisabled(true)}
+        onClick={handleSubmit}
       />
     </Page>
   );

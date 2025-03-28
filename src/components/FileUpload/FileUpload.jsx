@@ -5,12 +5,9 @@ import Image from "../Image/Image";
 import deleteIcon from "../../assets/icons/delete-icon.svg";
 import errorIcon from "../../assets/icons/error.svg";
 
-const FileUpload = ({ title, desc, btn }) => {
+const FileUpload = ({ title, desc, btn, error, setError, onFileChange }) => {
   const [file, setFile] = useState(null);
-  const [error, setError] = useState("");
   const fileInputRef = useRef(null);
-
-  console.log("file", file);
 
   const handleFileChange = (event) => {
     const selectedFile = event.target.files[0];
@@ -20,9 +17,11 @@ const FileUpload = ({ title, desc, btn }) => {
     if (selectedFile.size > 0.1 * 1024 * 1024) {
       setError("Fayl ölçüsü böyükdür");
       setFile(null);
+      onFileChange(null);
     } else {
       setFile(selectedFile);
       setError("");
+      onFileChange(selectedFile);
     }
   };
   const triggerFileInput = () => {
@@ -32,6 +31,7 @@ const FileUpload = ({ title, desc, btn }) => {
     setFile(null);
     fileInputRef.current.value = "";
     setError("");
+    onFileChange(null);
   };
 
   return (

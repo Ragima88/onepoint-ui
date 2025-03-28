@@ -1,0 +1,50 @@
+.warning-page {
+  background-color: #f3f4f7;
+  &-in {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5rem 1.5rem 2rem;
+  }
+  &-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 18rem;
+    flex: 1;
+    .title-block {
+      padding-top: 2.5rem;
+    }
+    .title-block .title-block-title {
+      font-weight: 700;
+      font-size: 1.75rem;
+      line-height: 120%;
+      color: #0c111d;
+    }
+    .title-block .title-block-desc {
+      font-size: 0.875rem;
+      line-height: 150%;
+    }
+  }
+
+  &-img {
+    width: 9.7rem;
+    img {
+      width: 100%;
+    }
+  }
+  &-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  &-primary-btn {
+    margin-bottom: 1.25rem;
+  }
+}

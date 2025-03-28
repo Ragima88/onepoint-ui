@@ -7,6 +7,7 @@ import PrimaryButton from "../../components/PrimaryButton/PrimaryButton";
 import Page from "../../components/Page/Page";
 import { useTranslation } from "react-i18next";
 import "../../i18n";
+import { useNavigate } from "react-router-dom";
 
 const radioGroup = [
   { label: "Instagram", value: "instagram" },
@@ -17,7 +18,14 @@ const radioGroup = [
 ];
 const CameFromPage = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const [selected, setSelected] = useState("");
+
+  const handleClick = () => {
+    if (!selected) return;
+    navigate("/employment");
+  };
+
   return (
     <Page className="came-from-page">
       <div className="came-from-page-fields">
@@ -34,7 +42,7 @@ const CameFromPage = () => {
       </div>
 
       <PrimaryButton
-        to={"/employment"}
+        onClick={handleClick}
         caption={t("cameFromPage.primaryCaption")}
       />
     </Page>

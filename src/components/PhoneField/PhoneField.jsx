@@ -1,19 +1,45 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TextField from "../TextField/TextField";
 import "./phone-field.scss";
 
-const PhoneField = ({ label, disabled = false }) => {
-  const [rawDigits, setRawDigits] = useState("");
+// PhoneField component takes in label, value, onChange, and disabled props
+const PhoneField = ({
+  label,
+  value = "",
+  setValue,
+  onChange: parentOnChange,
+  disabled = false,
+  error,
+  setError,
+}) => {
+  // Internal state to hold raw digits (only numbers)
+  const [rawDigits, setRawDigits] = useState(value);
 
-  // Convert any string to digits-only
+  // Sync internal state with parent value when it changes
+  useEffect(() => {
+    setRawDigits(value);
+  }, [value]);
+  const checkPhoneLength = () => {
+    if (value.length < 9) {
+      setError(true);
+    } else {
+      setError(false);
+    }
+  };
+
+  const handleBlur = () => {
+    checkPhoneLength();
+  };
+
+  // Utility to remove all non-digit characters
   const parseDigits = (input) => input.replace(/\D/g, "");
 
-  // Format digits (up to 9) as (XX) XXX XX XX
+  // Format a string of digits as (XX) XXX XX XX
   const formatDigits = (digits) => {
     const arr = digits.split("");
     let formatted = "";
 
-    // (XX)
+    // Add area code: (XX)
     if (arr.length > 0) {
       formatted += "(" + arr.slice(0, 2).join("");
       if (arr.length >= 2) {
@@ -21,17 +47,17 @@ const PhoneField = ({ label, disabled = false }) => {
       }
     }
 
-    // XXX
+    // Add next 3 digits: XXX
     if (arr.length >= 3) {
       formatted += arr.slice(2, 5).join("") + " ";
     }
 
-    // XX
+    // Add next 2 digits: XX
     if (arr.length >= 5) {
       formatted += arr.slice(5, 7).join("") + " ";
     }
 
-    // XX
+    // Add last 2 digits: XX
     if (arr.length >= 7) {
       formatted += arr.slice(7, 9).join("");
     }
@@ -39,33 +65,50 @@ const PhoneField = ({ label, disabled = false }) => {
     return formatted.trim();
   };
 
-  const onChange = (e) => {
+  // Handle changes to the input field
+  const handleChange = (e) => {
     const oldValue = formatDigits(rawDigits);
     const newValue = e.target.value;
 
-    // If new string is shorter, user is backspacing/removing
+    // If input is getting shorter, assume user is deleting
     if (newValue.length < oldValue.length) {
-      setRawDigits((prev) => prev.slice(0, -1));
+      const updated = rawDigits.slice(0, -1);
+      setRawDigits(updated);
+      parentOnChange?.(updated); // Notify parent component
     } else {
-      // User is adding characters
+      // If adding characters, parse and limit to 9 digits
       const digits = parseDigits(newValue).slice(0, 9);
       setRawDigits(digits);
+      parentOnChange?.(digits); // Notify parent component
+    }
+    if (parseDigits(newValue).length === 9) {
+      setError(false);
     }
   };
 
   return (
-    <label className="phone-field-label">
-      <span>{label}</span>
-      <div className={`phone-field ${disabled ? "disabled" : ""}`}>
-        <div className="phone-field-left">+994</div>
-        <TextField
-          placeholder="(——) ——— —— ——"
-          value={formatDigits(rawDigits)}
-          onChange={onChange}
-          disabled={disabled}
-        />
-      </div>
-    </label>
+    <>
+      <label className="phone-field-label">
+        {/* Label above the input */}
+        <span>{label}</span>
+
+        {/* Main container for the phone field */}
+        <div className={`phone-field ${disabled ? "disabled" : ""}`}>
+          {/* Prefix for the country code (static) */}
+          <div className="phone-field-left">+994</div>
+
+          {/* Text input field */}
+          <TextField
+            placeholder="(——) ——— —— ——" // Placeholder formatting
+            value={formatDigits(rawDigits)} // Show formatted value
+            onChange={handleChange} // Handle input changes
+            disabled={disabled} // Disable field if needed
+            onBlur={handleBlur}
+          />
+        </div>
+      </label>
+      {error && <p className="error-note">Error</p>}
+    </>
   );
 };
 

@@ -8,6 +8,7 @@ const TextField = ({
   name,
   value,
   onChange,
+  onBlur,
   disabled = false,
 }) => {
   const textClass = classNames({
@@ -27,6 +28,7 @@ const TextField = ({
           placeholder={placeholder}
           value={value}
           onChange={onChange}
+          onBlur={onBlur}
           disabled={disabled}
         />
       </label>

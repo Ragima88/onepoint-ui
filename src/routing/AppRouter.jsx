@@ -18,6 +18,23 @@ import PhoneOtpPage from "../pages/PhoneOtpPage/PhoneOtpPage";
 import KYCPage from "../pages/KYCPage/KYCPage";
 import LoanPage from "../pages/LoanPage/LoanPage";
 import PurposePage from "../pages/PurposePage/PurposePage";
+import CardPage from "../pages/CardPage/CardPage";
+import WaitingPage from "../pages/WaitingPage/WaitingPage";
+import SimaConsentPage from "../pages/SimaConsentPage/SimaConsentPage";
+import ContactsPage from "../pages/ContactsPage/ContactsPage";
+import OfferPage from "../pages/OfferPage/OfferPage";
+import InfoCheckPage from "../pages/InfoCheckPage/InfoCheckPage";
+import SimaSignPage from "../pages/SimaSignPage/SimaSignPage";
+import SuccessPage from "../pages/SuccessPage/SuccessPage";
+import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
+import ErrorPage from "../pages/ErrorPage/Error-page";
+import LoanPage2 from "../pages/LoanPage2/LoanPage2";
+import LoanPage3 from "../pages/LoanPage3/LoanPage3";
+import MenuPage from "../pages/MenuPage/MenuPage";
+import ProfileInfoPage from "../pages/ProfileInfoPage/ProfileInfoPage";
+import LanguagePage from "../pages/LanguagePage/LanguagePage";
+import WarningPage from "../pages/WarningPage/WarningPage";
+import SupportPage from "../pages/SupportPage/SupportPage";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -96,6 +113,74 @@ const router = createBrowserRouter([
       {
         path: "/purpose",
         element: <PurposePage />,
+      },
+      {
+        path: "/card",
+        element: <CardPage />,
+      },
+      {
+        path: "/waiting",
+        element: <WaitingPage />,
+      },
+      {
+        path: "/sima-consent",
+        element: <SimaConsentPage />,
+      },
+      {
+        path: "/contacts",
+        element: <ContactsPage />,
+      },
+      {
+        path: "/offer",
+        element: <OfferPage />,
+      },
+      {
+        path: "/info-check",
+        element: <InfoCheckPage />,
+      },
+      {
+        path: "/sima-sign",
+        element: <SimaSignPage />,
+      },
+      {
+        path: "/success",
+        element: <SuccessPage />,
+      },
+      {
+        path: "/not-found",
+        element: <NotFoundPage />,
+      },
+      {
+        path: "/error",
+        element: <ErrorPage />,
+      },
+      {
+        path: "/loan2",
+        element: <LoanPage2 />,
+      },
+      {
+        path: "/loan3",
+        element: <LoanPage3 />,
+      },
+      {
+        path: "/menu",
+        element: <MenuPage />,
+      },
+      {
+        path: "/profile-info",
+        element: <ProfileInfoPage />,
+      },
+      {
+        path: "/language",
+        element: <LanguagePage />,
+      },
+      {
+        path: "/warning",
+        element: <WarningPage />,
+      },
+      {
+        path: "/support",
+        element: <SupportPage />,
       },
     ],
   },

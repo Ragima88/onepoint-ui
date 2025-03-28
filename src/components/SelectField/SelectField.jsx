@@ -23,6 +23,11 @@ const SelectField = ({
     ["select-field"]: true,
     [`${className}`]: true,
   });
+  const selectInputClass = classNames({
+    ["select-field-input"]: true,
+    [`${className}`]: true,
+    ["disabled"]: disabled,
+  });
 
   return (
     <div className={selectClass}>
@@ -30,7 +35,7 @@ const SelectField = ({
         <span>{labelText}</span>
 
         <select
-          className="select-field-input"
+          className={selectInputClass}
           value={value}
           onChange={onChange}
           style={{

@@ -7,6 +7,7 @@ const DateSelector = ({
   from = 1950,
   to = new Date().getFullYear(),
   onChange = () => {},
+  disabled = false,
 }) => {
   const monthOptions = [
     { label: "Ay", value: "", disabled: true },
@@ -87,18 +88,19 @@ const DateSelector = ({
           options={getYears()}
           value={year}
           onChange={(e) => handleChange("year", e)}
+          disabled={disabled}
         />
         <SelectField
           options={getMonth()}
           value={month}
           onChange={(e) => handleChange("month", e)}
-          disabled={!year}
+          disabled={!year || disabled}
         />
         <SelectField
           options={getDay()}
           value={day}
           onChange={(e) => handleChange("day", e)}
-          disabled={!month}
+          disabled={!month || disabled}
         />
       </div>
     </div>

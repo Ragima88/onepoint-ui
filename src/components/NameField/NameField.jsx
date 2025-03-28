@@ -3,27 +3,53 @@ import TextField from "../TextField/TextField";
 
 import "./name-field.scss";
 
-const NameField = ({ label, placeholder, id, name, lang = "en" }) => {
-  const [value, setValue] = useState("");
-  let filteredValue;
+const NameField = ({
+  label,
+  value,
+  onChange = () => {},
+  placeholder,
+  id,
+  name,
+  lang = "en",
+  error,
+  setError,
+}) => {
   const handleChange = (e) => {
+    let filteredValue = e.target.value;
     if (lang === "en") {
-      filteredValue = e.target.value.replace(/[^a-zA-Z\s]/g, "");
+      filteredValue = filteredValue.replace(/[^a-zA-Z\s]/g, "");
+    } else if (lang === "az") {
+      filteredValue = filteredValue.replace(/[^A-Za-zƏÇĞIİÖŞÜəçğıöşü\s]/g, "");
     }
-    if (lang === "az") {
-      filteredValue = e.target.value.replace(/[^A-Za-zƏÇĞIİÖŞÜəçğıöşü\s]/g, "");
+    onChange(filteredValue);
+    if (filteredValue.length >= 3) setError(false);
+  };
+
+  const checkNameLength = () => {
+    if (value.length < 3) {
+      setError(true);
+    } else {
+      setError(false);
     }
-    setValue(filteredValue);
+  };
+
+  const handleBlur = () => {
+    checkNameLength();
   };
   return (
-    <TextField
-      label={label}
-      placeholder={placeholder}
-      id={id}
-      name={name}
-      value={value}
-      onChange={handleChange}
-    />
+    <>
+      <TextField
+        label={label}
+        placeholder={placeholder}
+        id={id}
+        name={name}
+        value={value}
+        onChange={handleChange}
+        onBlur={handleBlur}
+      />
+      {error && <p className="error-note">Error</p>}
+    </>
   );
 };
+
 export default NameField;

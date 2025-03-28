@@ -8,7 +8,8 @@
   "loginPage": {
     "title": "Daxil ol",
     "description": "Enter the email and password you used to register",
-    "finCode": "FİN kod:",
+    "finCodeLabel": "FİN kod:",
+    "passwordLabel": "Şifrə",
     "forgotPassword": "Şifrənizi unutmusunuz?",
     "notAccount": "Hesabınız yoxdur?",
     "register": "Qeydiyyatdan keçin",
@@ -21,6 +22,7 @@
     "idNumberLabel": "Şəxsiyyət vəsiqəsinin seriya nömrəsi:",
     "finCodeLabel": "FİN kod:",
     "finPlaceholder": "FİN kodu daxil edin.",
+    "finQuestion": "FİN kod nədir?",
     "attention": "Yalnız rəqəmlər və ingilis hərfləri daxil edin.",
     "primaryCaption": "Təsdiq edin"
   },
@@ -146,5 +148,249 @@
     "title": "Select a loan purpose",
     "desc": "Krediti nə üçün istifadə edəcəksiniz?",
     "primaryCaption": "Davam et"
+  },
+  "cardPage": {
+    "title": "Kart məlumatı",
+    "desc": "Bank kartı məlumatlarınızı aşağıda qeyd edin. Bu, daha sonrakı mərhələdə sizin seçdiyiniz kredit məbləğinin həmin karta köçürülməsini təmin edəcək.",
+    "primaryCaption": "Davam et",
+    "message": "Kart məlumatlarınızı doğru şəkildə yazdığınızdan tam əmin olun",
+    "nameLabel": "Kart sahibin adı",
+    "namePlaceHolder": "Place Holder"
+  },
+  "waitingPage": {
+    "title": "Razılıq gözlənilir",
+    "desc": "Qeyd etdiyiniz nömrələrə razılıq mesajı göndərilib. Hər 3 şəxs də razılıq verdikdən sonra prosesə davam edə bilərsiniz"
+  },
+  "simaConsentPage": {
+    "title": "Razılığın verilməsi",
+    "desc": "Siz ASAN və MKR məlumatlarınızın yoxlanılmasına razılıq verməlisiniz",
+    "primaryCaption": "Razılıq ver",
+    "buttonCaption": "İmtina et",
+    "items": [
+      {
+        "id": 1,
+        "content": "SIMA tətbiqini yükləyin"
+      },
+      {
+        "id": 2,
+        "content": "Qeydiyyatdan keçin və şəxsiyyət vəsiqənizi təsdiqləyin"
+      },
+      {
+        "id": 3,
+        "content": "SİMA tətbiqində qeydiyyatdan keçdikdən sonra aşağıdakı geri dönün “Razılıq ver” düyməsinə basın"
+      },
+      {
+        "id": 4,
+        "content": "SİMA tətbiqi açılacaq və razılıq verdikdən sonra yenidən vebsaytda qayıdın"
+      }
+    ]
+  },
+  "contactsPage": {
+    "title": "Əlaqə nömrələri",
+    "desc": "3 yaxın şəxsin əlaqə nömrəsini daxil edin.",
+    "primaryCaption": "Davam et",
+    "warningMessage": "Nömrələrin düzgün və aktiv olması vacibdir. Razılıq vermək üçün internet bağlantısı olmalıdır.",
+    "nameLabel": "Ad, soyad",
+    "namePlaceHolder": "Place Holder",
+    "phoneLabel": "Mobil nömrə",
+    "checkboxLabel": "Nömrələr düzgündür və internet bağlantıları aktivdir.",
+    "selectLabel": "Əlaqə",
+    "items": [
+      {
+        "id": 1,
+        "personFirst": "1-ci şəxs"
+      },
+      {
+        "id": 2,
+        "personFirst": "2-ci şəxs"
+      },
+      {
+        "id": 3,
+        "personFirst": "3-cü şəxs"
+      }
+    ]
+  },
+  "offerPage": {
+    "title": "Təklif",
+    "desc": "Sizə təklif olunan məbləği və ödəmək istədiyiniz müddəti seçin",
+    "primaryCaption": "Davam et",
+    "buttonCaption": "İmtina et",
+    "month": "1 ay",
+    "info": "Komissiya 10% təşkil edəcək",
+    "paidTitle": "Kartda ödənilən",
+    "paidPrice": "50.02",
+    "returnedTitle": "Qaytarılacaq məbləğ",
+    "returnedPrice": "66.08"
+  },
+  "infoCheckPage": {
+    "title": "Məlumatı yoxla",
+    "desc": "Qeyd etdiyiniz məlumatların doğrulunu yoxlayın",
+    "primaryCaption": "Davam et",
+    "buttonCaption": "İmtina et",
+    "cartNumberLabel": "Kart nömrəsi",
+    "cartNumberPlaceholder": "4169 7388 3775 4587",
+    "cartNameLabel": "Kart sahibin adı",
+    "cartNamePlaceholder": "Tacir Məmmədov",
+    "loanInfo": {
+      "desc": {
+        "price": "Kreditin məbləği",
+        "percent": "Komissiya",
+        "transfer": "Karta köçəcək",
+        "clock": "Müddət",
+        "calendar": "Aylıq ödəniş",
+        "cardPlus": "Ümumi ödəniş"
+      },
+      "value": {
+        "price": "61 AZN",
+        "percent": "10.98 AZN",
+        "transfer": "50.02 AZN",
+        "clock": "1 ay",
+        "calendar": "66.08 AZN",
+        "cardPlus": "66.08 AZN"
+      }
+    }
+  },
+  "simaSignPage": {
+    "title": "Müqaviləni imzala",
+    "desc": "Müqaviləni imzalamaq üçün aşağıda qeyd olunanları yerinə yetirin",
+    "primaryCaption": "İmzala",
+    "buttonCaption": "İmtina et",
+    "items": [
+      {
+        "id": 1,
+        "content": "SIMA tətbiqini yükləyin"
+      },
+      {
+        "id": 2,
+        "content": "Qeydiyyatdan keçin və şəxsiyyət vəsiqənizi təsdiqləyin"
+      },
+      {
+        "id": 3,
+        "content": "SİMA tətbiqində qeydiyyatdan keçdikdən sonra aşağıdakı “İmzala” düyməsinə basın"
+      },
+      {
+        "id": 4,
+        "content": "SİMA tətbiqi açılacaq, göstərilən müqaviləni oxuyub imzaladıqdan sonra sayta geri dönün"
+      }
+    ]
+  },
+  "successPage": {
+    "title": "Kreditiniz rəsmiləşdi",
+    "desc": "Kredit növbəti 30 dəqiqə ərzində qeyd etdiyiniz karta köçürüləcək.",
+    "info": "Kreditiniz 30 dəqiqə ərzində köçməsə müştəri xidmətlərinə müraciət edin",
+    "primaryCaption": "Ana səhifə"
+  },
+  "notFoundPage": {
+    "title": "404 Error",
+    "desc": "Sorry, page not found",
+    "primaryCaption": "Ana səhifə"
+  },
+  "errorPage": {
+    "title": "Xəta baş verdi",
+    "desc": "Xahiş edirik biraz sonra cəhd edin",
+    "primaryCaption": "Ana səhifə"
+  },
+  "loanPage2": {
+    "title": "SON MÜRACİƏTİNİZ",
+    "desc": "Stay tuned. We are launching soon. We are working hard. ",
+    "primaryCaption": "Davam et",
+    "buttonCaption": "İmtina et",
+    "contentTitleFirst": "Müraciət tarixi",
+    "contentDate": "10.07.2024, 16:30:31",
+    "contentTitleSecond": "Qaldığınız mərhələ",
+    "contentDesc": "Contacts verifications"
+  },
+  "loanPage3": {
+    "debtTitle": "Outstanding Debt",
+    "status": "Active",
+    "debtAmount": "66.08",
+    "leftText": "Əsas borc",
+    "leftPrice": "61.00",
+    "rightText": "Faiz borcu:",
+    "rightPrice": "5.08",
+    "primaryCaption": "Krediti ödə",
+    "upload": "Sənədləri yüklə",
+    "repaymentScheduleTitle": "Repayment Schedule Section",
+    "paymentHistoryTitle": "Payment History Section",
+    "scheduleTitles": ["Tarix", "Aylıq", "Son qalıq"],
+    "historyTitles": ["Tarix", "Ödəniş", "Gecikmə"],
+    "items": {
+      "date": {},
+      "price": {},
+      "rest": {}
+    },
+    "loanInfo": {
+      "desc": {
+        "lender": "Lender",
+        "type": "Loan type",
+        "number": "Agrement number",
+        "fin": "Fin code",
+        "payment": "Montly payment",
+        "term": "Term",
+        "signed": "Signed at",
+        "date": "Due date"
+      },
+      "value": {
+        "lender": "EMBAFINANS",
+        "type": "Express credit",
+        "number": "005-ONP-13757-24",
+        "fin": "72JBW62",
+        "payment": "100 ₼",
+        "term": "2 months",
+        "signed": "05.02.2024",
+        "date": "05.04.2024"
+      }
+    }
+  },
+  "menuPage": {
+    "name": "Tacir Məmmədov",
+    "menu": {
+      "user": "Şəxsi məlumatlar",
+      "lang": "Dili dəyiş",
+      "phone": "Əlaqə",
+      "lock": "Şifrəni dəyiş",
+      "security": "Məxfilik siyasəti",
+      "help": "Haqqımızda"
+    },
+    "logout": "Çıxış"
+  },
+  "profileInfoPage": {
+    "user": {
+      "label": "Ad və soyad",
+      "name": "Tacir Məmmədov"
+    },
+    "finCode": {
+      "label": "FİN kod",
+      "code": "7AT3RTY"
+    },
+    "email": {
+      "label": "Email",
+      "address": "taaceer@gmail.com"
+    },
+    "phone": {
+      "label": "Mobil nömrə",
+      "number": "+994 70 327 07 09"
+    }
+  },
+  "languagePage": {
+    "primaryCaption": "Təsdiq et"
+  },
+  "warningPage": {
+    "title": "Xəbərdarlıq!",
+    "desc": "E-mailinizi dəyişdiyiniz zaman növbəti 1 ay müddətində dəyişə bilməzsiniz",
+    "primaryCaption": "Davam et",
+    "buttonCaption": "İmtina et"
+  },
+  "supportPage": {
+    "menu": {
+      "liveSupport": "Canlı dəstək",
+      "email": "E-mail göndər",
+      "instagram": "Instagram",
+      "telegram": "Telegram",
+      "facebook": "Facebook",
+      "tiktok": "Tiktok",
+      "linkedin": "Linkedin",
+      "youtube": "Youtube"
+    }
   }
 }

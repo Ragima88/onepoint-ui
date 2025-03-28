@@ -13,19 +13,45 @@ import "../../i18n";
 import Drawer from "../../components/Drawer/Drawer";
 import passport from "../../assets/images/passport.png";
 
-const options = [
-  { label: "Select an option", value: "", disabled: true },
-  { label: "Option 1", value: "option1" },
-  { label: "Option 2", value: "option2" },
-  { label: "Option 3", value: "option3" },
-];
 const PersonalInfoPage = () => {
   const { t } = useTranslation();
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [date, setDate] = useState(null);
+  const [type, setType] = useState("AZE");
+  const [number, setNumber] = useState("");
+  const [fin, setFin] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [finError, setFinError] = useState(false);
+  const [idNumberError, setIdNumberError] = useState(false);
+
   const finClick = () => {
     setDrawerOpen(true);
   };
+
+  const validation = () => {
+    const isDateValid = !!date;
+    const isFinValid = fin.trim().length === 7;
+    const isIdValid =
+      (type === "AZE" && number.trim().length === 8) ||
+      (type === "AA" && number.trim().length === 7);
+
+    setFinError(!isFinValid);
+    setIdNumberError(!isIdValid);
+
+    if (!isDateValid || !isFinValid || !isIdValid) {
+      alert("Zəhmət olmasa bütün sahələri düzgün doldurun.");
+      return false;
+    }
+
+    return true;
+  };
+
+  const handleSubmit = () => {
+    if (validation()) {
+      setLoading(true);
+    }
+  };
+
   return (
     <Page className="personal-info-page">
       <div className="personal-info-fields">
@@ -35,28 +61,46 @@ const PersonalInfoPage = () => {
         />
         <DateSelector
           labelText={t("personalPage.dateLabel")}
-          options={options}
-          value={date}
           onChange={setDate}
+          disabled={loading}
         />
-        <IdNumberField label={t("personalPage.idNumberLabel")} />
+        <IdNumberField
+          label={t("personalPage.idNumberLabel")}
+          type={type}
+          number={number}
+          setType={setType}
+          setNumber={setNumber}
+          disabled={loading}
+          error={idNumberError}
+          setError={setIdNumberError}
+        />
         <div className="personal-info-fin-text">
           <FinCodeField
             label={t("personalPage.finCodeLabel")}
             placeholder={t("personalPage.finPlaceholder")}
+            fin={fin}
+            setFin={setFin}
+            disabled={loading}
+            error={finError}
+            setError={setFinError}
           />
           <div className="personal-info-text">
             <Image className="info-icon" src={infoIcon} />
             <span>{t("personalPage.attention")}</span>
           </div>
           <div onClick={finClick} className="fin-link">
-            FİN kod nədir?
+            {t("personalPage.finQuestion")}
           </div>
         </div>
       </div>
-      <PrimaryButton caption={t("personalPage.primaryCaption")} />
+      <PrimaryButton
+        onClick={handleSubmit}
+        caption={t("personalPage.primaryCaption")}
+        loading={loading}
+      />
       <Drawer isOpen={drawerOpen} onClose={() => setDrawerOpen(false)}>
         <h2 className="fin-title">FİN kod nədir?</h2>
+        {/* Todo: Will use another component and ad to i18n */}
         <Image src={passport} />
       </Drawer>
     </Page>

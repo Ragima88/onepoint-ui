@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
-  max-width: 25rem;
+
   span {
     padding-left: 0.5rem;
     font-size: 0.875rem;
@@ -39,5 +39,12 @@
         padding: 0 0.9rem;
       }
     }
+  }
+  .error-note {
+    color: #f04438;
+    text-align: left;
+    align-self: flex-start;
+    padding-left: 0.5rem;
+    font-size: 0.875rem;
   }
 }

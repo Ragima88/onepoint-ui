@@ -1,0 +1,31 @@
+.loader-blink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 5em;
+}
+.loader-blink-in {
+  width: 0.9375em;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  animation: l5 1s infinite linear alternate;
+}
+@keyframes l5 {
+  0% {
+    box-shadow: 1.25em 0 #000, -1.25em 0 #0002;
+    background: #000;
+  }
+  33% {
+    box-shadow: 1.25em 0 #000, -1.25em 0 #0002;
+    background: #0002;
+  }
+  66% {
+    box-shadow: 1.25em 0 #0002, -1.25em 0 #000;
+    background: #0002;
+  }
+  100% {
+    box-shadow: 1.25em 0 #0002, -1.25em 0 #000;
+    background: #000;
+  }
+}

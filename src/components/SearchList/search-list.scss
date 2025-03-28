@@ -2,7 +2,7 @@
 .search-list {
   position: relative;
   width: 100%;
-  max-width: 25rem;
+
   margin: auto;
 
   &__input-container {
@@ -50,10 +50,10 @@
       left: 50%;
       transform: translateX(-50%);
       width: 50%;
-      max-width: 500px;
+      max-width: 31.25rem;
       height: calc(100% - 40px);
-      margin: 20px 0;
-      border-radius: 12px;
+      margin: 1.25rem 0;
+      border-radius: 0.75rem;
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
   }

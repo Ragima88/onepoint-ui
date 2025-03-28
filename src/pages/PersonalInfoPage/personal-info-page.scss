@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: 25rem;
+
   &-in {
     display: flex;
     flex-direction: column;
@@ -41,7 +41,7 @@
           .info-icon {
             width: 0.875rem;
             height: 0.875rem;
-            margin-right: 0.3rem;
+            margin-right: 0.375rem;
             img {
               width: 100%;
             }

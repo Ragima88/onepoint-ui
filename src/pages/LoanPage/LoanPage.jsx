@@ -41,7 +41,7 @@ const LoanPage = () => {
                   alt={t(`menu.${item}`)}
                 />
               )}
-              {t(`loanPage.menu.${item}`)}
+              {t(`menuPage.menu.${item}`)}
             </li>
           ))}
         </ul>

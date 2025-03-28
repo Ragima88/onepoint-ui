@@ -1,0 +1,32 @@
+export const messages = {
+  en: {
+    latinAlphabet: 'Must contain Latin alphabet letters',
+    uppercaseLowercase: 'Must contain both uppercase and lowercase letters',
+    numbers: 'Must contain numbers',
+    minLength: 'Must be between 8 and 32 characters long',
+    specialSymbols: `(Optional) Better if contains allowed special symbols !@#%^&()[]_+-=#^($){}|;':",./<>?~`,
+    restrictChars: 'Must restrict to specified characters',
+    invalidPassword: 'Invalid password character',
+    mismatch: 'Passwords do not match',
+  },
+  az: {
+    latinAlphabet: 'Latın əlifbası',
+    uppercaseLowercase: 'Böyük və kiçik hərflərdən istifadə olunmalıdır',
+    numbers: 'Rəqəmlərdən istifadə olunmalıdır',
+    minLength: 'Uzunluğu 8-32 simvol arasında olmalıdır',
+    specialSymbols: `(Məcburi deyil) Xüsusi simvolları istifadə edin !@#%^&()[]_+-=#^($){}|;':",./<>?~`,
+    restrictChars: 'Yalnız qeyd olunan xüsusi simvollar işlənə bilər',
+    invalidPassword: 'Yanlış simvoldan istifadə olunub',
+    mismatch: 'Şifrələr bir-birinə uyğun gəlmir',
+  },
+  ru: {
+    latinAlphabet: 'Должен содержать буквы латинского алфавита',
+    uppercaseLowercase: 'Должен содержать как заглавные, так и строчные буквы',
+    numbers: 'Должен содержать цифры',
+    minLength: 'Должен содержать от 8 до 32 символов',
+    specialSymbols: `(Необязательно) Лучше, если содержит разрешенные специальные символы !@#%^&()[]_+-=#^($){}|;':",./<>?~`,
+    restrictChars: 'Должен ограничиваться указанными символами',
+    invalidPassword: 'Недопустимый символ пароля',
+    mismatch: 'Пароли не совпадают',
+  },
+};

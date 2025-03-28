@@ -14,6 +14,13 @@
     justify-content: center;
     width: 100%;
     margin-bottom: 1rem;
+    .error-note {
+      color: #f04438;
+      text-align: left;
+      align-self: flex-start;
+      padding-left: 0.5rem;
+      font-size: 0.875rem;
+    }
     .scoring {
       display: flex;
       flex-direction: row;
@@ -34,7 +41,7 @@
         width: 100%;
         align-items: center;
         justify-content: center;
-        font-size: 14px;
+        font-size: 0.875rem;
         line-height: 140%;
         color: #0c111d;
       }
@@ -46,11 +53,12 @@
       justify-content: center;
       width: 100%;
       border: 1px solid #2e90fa;
-      border-radius: 8px;
-      padding: 14px 20px;
+      border-radius: 0.5rem;
+      padding: 0.875rem 1.25rem;
       margin-bottom: 2rem;
+      background-color: white;
       &-img {
-        width: 20px;
+        width: 1.25rem;
         margin-right: 0.5rem;
         img {
           width: 100%;
@@ -58,7 +66,7 @@
       }
       span {
         font-weight: 500;
-        font-size: 20px;
+        font-size: 1.25rem;
         line-height: 100%;
         text-align: center;
         text-decoration: underline;
@@ -80,38 +88,11 @@
 
       h2 {
         font-weight: 700;
-        font-size: 20px;
+        font-size: 1.25rem;
         line-height: 120%;
         text-align: center;
         color: #0c111d;
         margin-bottom: 1rem;
-      }
-    }
-    .warning {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      padding: 0.5rem 1rem;
-      border: 1px solid #dc6803;
-      border-radius: 0.5rem;
-      background: #fffaeb;
-      margin-bottom: 2rem;
-      &-img {
-        display: flex;
-        width: 20px;
-        margin-right: 0.5rem;
-        flex: none;
-        img {
-          width: 100%;
-        }
-      }
-      &-message {
-        font-size: 12px;
-        line-height: 150%;
-        vertical-align: middle;
-        color: #4e1d09;
       }
     }
   }
