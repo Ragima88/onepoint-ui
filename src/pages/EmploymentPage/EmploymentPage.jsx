@@ -19,7 +19,12 @@ const EmploymentPage = () => {
   const [workPlace, setWorkPlace] = useState("");
 
   const handleClick = () => {
-    if (!value || (value === "bəli" && !workPlace.trim())) {
+    if (!value) {
+      alert("Zəhmət olmasa, bir seçim edin.");
+      return;
+    }
+    if (value === "bəli" && !workPlace.trim()) {
+      alert("Zəhmət olmasa,boş sahəni doldurun.");
       return;
     }
     navigate("/address");

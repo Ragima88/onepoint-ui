@@ -12,7 +12,7 @@ const NameField = ({
   name,
   lang = "en",
   error,
-  setError,
+  setError = () => {},
 }) => {
   const handleChange = (e) => {
     let filteredValue = e.target.value;

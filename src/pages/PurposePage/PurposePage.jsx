@@ -8,11 +8,8 @@ import "../../i18n";
 import "./purpose-page.scss";
 import { useState } from "react";
 import TextareaField from "../../components/TextAreaField/TextAreaField";
+import { useNavigate } from "react-router-dom";
 const radioGroup = [
-  { label: "Debt Consolidation", value: "Debt" },
-  { label: "Credit Building", value: "Credit" },
-  { label: "Renovation Loan", value: "Renovation" },
-  { label: "Wedding Loans", value: "Wedding" },
   { label: "Debt Consolidation", value: "Debt" },
   { label: "Credit Building", value: "Credit" },
   { label: "Renovation Loan", value: "Renovation" },
@@ -22,7 +19,24 @@ const radioGroup = [
 
 const PurposePage = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const [selected, setSelected] = useState("");
+  const [otherText, setOtherText] = useState("");
+
+  const handleSubmit = () => {
+    if (!selected) {
+      alert("Zəhmət olmasa, məqsəd seçin.");
+      return;
+    }
+
+    if (selected === "digər" && !otherText.trim()) {
+      alert("Zəhmət olmasa, digər sahəsini doldurun.");
+      return;
+    }
+
+    navigate("/");
+  };
+
   return (
     <Page className={"purpose-page"}>
       <div className="purpose-page-main">
@@ -35,12 +49,18 @@ const PurposePage = () => {
           value={selected}
           onChange={setSelected}
         />
-        {selected === "digər" && <TextareaField />}
+        {selected === "digər" && (
+          <TextareaField
+            value={otherText}
+            onChange={(e) => setOtherText(e.target.value)}
+          />
+        )}
       </div>
       <div className="purpose-page-bottom">
         <PrimaryButton
           className="purpose-page-btn"
           caption={t("purposePage.primaryCaption")}
+          onClick={handleSubmit}
         />
         <LoanBottom />
       </div>

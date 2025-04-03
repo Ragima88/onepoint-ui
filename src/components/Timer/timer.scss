@@ -1,0 +1,21 @@
+.timer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  &-icon {
+    width: 1.5rem;
+    margin-right: 0.5rem;
+    padding-top: 0.25rem;
+    img {
+      width: 100%;
+    }
+  }
+  &-number {
+    margin-bottom: 3rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #0c111d;
+  }
+}

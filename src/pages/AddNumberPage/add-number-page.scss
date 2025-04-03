@@ -1,0 +1,21 @@
+.add-number-page {
+  &-in {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 2rem 1.5rem 0;
+    .title-block {
+      padding-bottom: 1.5rem;
+    }
+  }
+  &-close {
+    width: 2rem;
+    display: flex;
+    align-self: flex-end;
+    img {
+      width: 100%;
+    }
+  }
+}

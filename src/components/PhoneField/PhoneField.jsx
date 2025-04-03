@@ -6,19 +6,16 @@ import "./phone-field.scss";
 const PhoneField = ({
   label,
   value = "",
-  setValue,
+  setValue = () => {},
   onChange: parentOnChange,
   disabled = false,
   error,
   setError,
 }) => {
-  // Internal state to hold raw digits (only numbers)
-  const [rawDigits, setRawDigits] = useState(value);
-
-  // Sync internal state with parent value when it changes
   useEffect(() => {
-    setRawDigits(value);
+    setValue(value);
   }, [value]);
+
   const checkPhoneLength = () => {
     if (value.length < 9) {
       setError(true);
@@ -67,18 +64,18 @@ const PhoneField = ({
 
   // Handle changes to the input field
   const handleChange = (e) => {
-    const oldValue = formatDigits(rawDigits);
+    const oldValue = formatDigits(value);
     const newValue = e.target.value;
 
     // If input is getting shorter, assume user is deleting
     if (newValue.length < oldValue.length) {
-      const updated = rawDigits.slice(0, -1);
-      setRawDigits(updated);
+      const updated = value.slice(0, -1);
+      setValue(updated);
       parentOnChange?.(updated); // Notify parent component
     } else {
       // If adding characters, parse and limit to 9 digits
       const digits = parseDigits(newValue).slice(0, 9);
-      setRawDigits(digits);
+      setValue(digits);
       parentOnChange?.(digits); // Notify parent component
     }
     if (parseDigits(newValue).length === 9) {
@@ -100,7 +97,7 @@ const PhoneField = ({
           {/* Text input field */}
           <TextField
             placeholder="(——) ——— —— ——" // Placeholder formatting
-            value={formatDigits(rawDigits)} // Show formatted value
+            value={formatDigits(value)} // Show formatted value
             onChange={handleChange} // Handle input changes
             disabled={disabled} // Disable field if needed
             onBlur={handleBlur}

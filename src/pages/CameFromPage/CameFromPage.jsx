@@ -20,9 +20,19 @@ const CameFromPage = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const [selected, setSelected] = useState("");
+  const [otherValue, setOtherValue] = useState("");
 
   const handleClick = () => {
-    if (!selected) return;
+    if (!selected) {
+      alert("Zəhmət olmasa, bir seçim edin.");
+      return;
+    }
+
+    if (selected === "digər" && !otherValue.trim()) {
+      alert("Zəhmət olmasa, digər sahəsini doldurun.");
+      return;
+    }
+
     navigate("/employment");
   };
 
@@ -38,7 +48,12 @@ const CameFromPage = () => {
           value={selected}
           onChange={setSelected}
         />
-        {selected === "digər" && <TextareaField />}
+        {selected === "digər" && (
+          <TextareaField
+            value={otherValue}
+            onChange={(e) => setOtherValue(e.target.value)}
+          />
+        )}
       </div>
 
       <PrimaryButton

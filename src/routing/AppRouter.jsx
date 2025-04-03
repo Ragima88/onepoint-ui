@@ -35,6 +35,8 @@ import ProfileInfoPage from "../pages/ProfileInfoPage/ProfileInfoPage";
 import LanguagePage from "../pages/LanguagePage/LanguagePage";
 import WarningPage from "../pages/WarningPage/WarningPage";
 import SupportPage from "../pages/SupportPage/SupportPage";
+import ContactsVerificationPage from "../pages/ContactsVerificationPage/ContactsVerificationPage";
+import AddNumberPage from "../pages/AddNumberPage/AddNumberPage";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -181,6 +183,14 @@ const router = createBrowserRouter([
       {
         path: "/support",
         element: <SupportPage />,
+      },
+      {
+        path: "/contacts-verification",
+        element: <ContactsVerificationPage />,
+      },
+      {
+        path: "/add-number",
+        element: <AddNumberPage />,
       },
     ],
   },

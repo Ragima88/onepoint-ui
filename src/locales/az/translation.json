@@ -202,11 +202,11 @@
       },
       {
         "id": 2,
-        "personFirst": "2-ci şəxs"
+        "personSecond": "2-ci şəxs"
       },
       {
         "id": 3,
-        "personFirst": "3-cü şəxs"
+        "personThird": "3-cü şəxs"
       }
     ]
   },
@@ -392,5 +392,24 @@
       "linkedin": "Linkedin",
       "youtube": "Youtube"
     }
+  },
+  "contactsVerificationPage": {
+    "title": "Razılıq gözlənilir",
+    "desc": "10 dəqiqə sonra mesajı yenidən göndərə və ya yeni nömrə əlavə edə bilərsiniz",
+    "message": "Yeni mesaj",
+    "buttonCaption": "Nömrə əlavə et"
+  },
+  "numberIndicator": {
+    "pending": "Təsdiq gözlənilir",
+    "approved": "Təsdiq etdi",
+    "rejected": "İmtina et"
+  },
+  "addNumberPage": {
+    "title": "Nömrə əlavə et",
+    "desc": "Yeni nömrə yazmaq üçün aşağıdakı məlumatları dəyişib təsdiq edin",
+    "message": "Nömrələrin düzgün və aktiv olması vacibdir. Razılıq vermək üçün internet bağlantısı olmalıdır.",
+    "nameLabel": "Ad, soyad",
+    "phoneLabel": "Mobil Nömrə",
+    "primaryCaption": "Əlavə et"
   }
 }

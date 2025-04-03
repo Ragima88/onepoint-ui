@@ -22,7 +22,7 @@ const locations = [
   "South Australia, Australia",
 ];
 
-export default function SearchList({ placeholder }) {
+export default function SearchList({ placeholder, value, onChange }) {
   const [query, setQuery] = useState("");
   const [popupQuery, setPopupQuery] = useState("");
   const [isOpen, setIsOpen] = useState(false);
